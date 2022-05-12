@@ -13,7 +13,7 @@ from . import __version__
 
 def main():
     ssl_mode = False
-    host = ''
+    host = os.environ.get('LISTENIP') or "127.0.0.1"
     port = os.environ.get('PORT') or 5000
     do_cleanup = False
     datastore_path = None
